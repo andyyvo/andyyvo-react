@@ -13,29 +13,29 @@ export enum ButtonHover {
 }
 
 export interface ButtonProps {
-  /** Accessible name for button */
+  /** accessible name for button */
   'aria-label'?: string;
-  /** Color of button background */
+  /** color of button background */
   backgroundColor?: string;
-  /** Renders content inside button */
+  /** renders content inside button */
   children?: React.ReactNode;
-  /** Class name of button */
+  /** class name of button */
   classname?: string;
-  /** Color of button text */
+  /** color of button text */
   color?: string;
-  /** Hover color of button */
+  /** hover color of button */
   hoverColor?: string;
-  /** Hover height of button */
+  /** hover height of button */
   hoverHeight?: 'high' | 'low' | 'flat';
-  /** Icon on button */
+  /** icon on button */
   icon?: React.ReactNode | null;
-  /** Icon position */
+  /** icon position */
   iconPosition?: 'left' | 'right';
-  /** Padding size of button */
+  /** padding size of button */
   padding?: 'large' | 'small' | 'none';
-  /** Button variant */
+  /** button variant */
   variant: 'primary' | 'secondary' | 'link';
-  /** Forwarded ref */
+  /** forwarded ref */
   innerRef?: React.Ref<any>;
 }
 
