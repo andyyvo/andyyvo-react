@@ -35,11 +35,9 @@ export interface ButtonProps {
   padding?: 'large' | 'small' | 'none';
   /** button variant */
   variant: 'primary' | 'secondary' | 'link';
-  /** forwarded ref */
-  innerRef?: React.Ref<any>;
 }
 
-const ButtonMain: React.FunctionComponent<ButtonProps> = ({
+export const Button: React.FunctionComponent<ButtonProps> = ({
   'aria-label': ariaLabel = 'Button',
   backgroundColor = '#243A5C',
   children = null,
@@ -73,15 +71,9 @@ const ButtonMain: React.FunctionComponent<ButtonProps> = ({
     <button
       {...props}
       style={ButtonStyle}
-      className={classname && 'button'}
+      className={classname +' '+ variant}
     >
       {children}
     </button>
   )
 }
-
-export const Button = React.forwardRef((props: ButtonProps, ref: React.Ref<any>) => (
-  <ButtonMain innerRef={ref} {...props} />
-));
-
-Button.displayName = 'Button';

@@ -12,21 +12,21 @@ export interface ScreenProps {
 }
 
 export const Screen: React.FunctionComponent<ScreenProps> = ({
-  backgroundColor = 'white',
+  backgroundColor = '#fff',
   children = null,
   classname = 'screen',
   padding = '',
   ...props
 }: ScreenProps) => {
+  const ScreenStyle = {
+    backgroundColor: backgroundColor,
+    padding: padding
+  }
   return (
     <div
     {...props}
-      className={
-        classname &&
-        backgroundColor &&
-        padding &&
-        'screen'
-      }
+      className={classname}
+      style={ScreenStyle}
     >
       {children}
     </div>
