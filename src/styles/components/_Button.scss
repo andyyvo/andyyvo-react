@@ -1,0 +1,17 @@
+@use '../variables' as v;
+
+.button {
+  cursor: pointer;
+
+  &.primary {
+    color: v.$emerald;
+  }
+
+  &.secondary {
+
+  }
+
+  &.link {
+
+  }
+}

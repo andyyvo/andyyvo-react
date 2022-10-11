@@ -1,3 +1,11 @@
+@import "./variables";
+@import "./components/Button";
+@import "./components/Logo";
+@import "./components/NavBar";
+@import "./pages/HomePage";
+
+// sass --watch ./src/styles/index.scss ./src/App.css
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -23,25 +23,35 @@ export const Logo: React.FunctionComponent<LogoProps> = ({
   const logoColor = () => {
     if (color === 'dark') {
       return (
-        <img src={logo_dark} alt="andy vo logo" />
+        <img
+          src={logo_dark}
+          alt="andy vo logo"
+          {...props}
+          className={
+            classname +' '+
+            size +' '+
+            'logo'
+          }
+        />
       );
     } else {
       return (
-        <img src={logo_light} alt="andy vo logo" />
+        <img
+          src={logo_light}
+          alt="andy vo logo"
+          className={
+            classname +' '+
+            size +' '+
+            'logo'
+          }
+        />
       );
     }
   }
 
   return (
-    <div
-      {...props}
-      className={
-        classname +' '+
-        size +' '+
-        'logo'
-      }
-    >
+    <>
       {logoColor()}
-    </div>
+    </>
   )
 }

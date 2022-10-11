@@ -15,7 +15,7 @@ export const ScreenFrame: React.FunctionComponent<ScreenFrameProps> = ({
   return (
     <div
       {...props}
-      className={classname && 'screenframe'}
+      className={classname}
     >
       {children}
     </div>

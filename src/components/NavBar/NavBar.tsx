@@ -1,70 +1,37 @@
-import React, { useEffect } from "react";
+import { Button } from "../Button/Button";
+import { Logo } from "../Logo/Logo";
+import { Nav } from "./Nav";
 
-export interface NavProps {
-  /** accessible name for nav bar */
-  'aria-label'?: string;
-  /** color of nav bar background */
-  backgroundColor?: string;
-  /** class name of button */
-  classname?: string;
-  /** renders logo left side of nav bar */
-  logo?: React.ReactNode;
-  /** renders menu options right side of nav bar */
-  menu?: React.ReactNode;
-}
+/** wrapper component for Nav */
+export const NavBar: React.FunctionComponent = () => {
+  const menuOptions = (
+    <>
+      <Button
+        variant="link"
+      >
+        About
+      </Button>
+      <Button
+        variant="link"
+      >
+        Work
+      </Button>
+      <Button
+        variant="link"
+      >
+        Collaborate
+      </Button>
+    </>
+  );
 
-export const NavBar: React.FunctionComponent<NavProps> = ({
-  'aria-label': ariaLabel = 'NavBar',
-  backgroundColor = '#fff',
-  classname = 'navbar',
-  logo,
-  menu,
-  ...props
-}: NavProps) => {
-  const [windowSize, setWindowSize] = React.useState(getWindowSize());
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-    console.log(windowSize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    }
-  }, []);
-
-  const NavBarStyle = {
-    backgroundColor: backgroundColor
-  }
+  const menuLogo = (
+    <Logo color="dark" size="small" />
+  );
 
   return (
-    <div
-      {...props}
-      className={classname}
-      style={NavBarStyle}
-    >
-      <div
-        className="navbar-logo"
-      >
-        {logo}
-      </div>
-      <div
-        className="navbar-menu"
-      >
-        {menu}
-      </div>
-    </div>
+    <Nav
+      logo={menuLogo}
+      menu={menuOptions}
+    />
   );
-}
-
-function getWindowSize() {
-  const {
-    innerWidth,
-    innerHeight
-  } = window;
-
-  return { innerWidth, innerHeight };
 }

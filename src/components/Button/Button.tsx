@@ -16,7 +16,7 @@ export interface ButtonProps {
   /** accessible name for button */
   'aria-label'?: string;
   /** color of button background */
-  backgroundColor?: string;
+  backgroundColor?: 'blue' | 'teal' | 'green' | 'cream' | 'offwhite' | 'white';
   /** renders content inside button */
   children?: React.ReactNode;
   /** class name of button */
@@ -28,7 +28,7 @@ export interface ButtonProps {
   /** hover height of button */
   hoverHeight?: 'high' | 'low' | 'flat';
   /** icon on button */
-  icon?: React.ReactNode | null;
+  icon?: React.ReactNode;
   /** icon position */
   iconPosition?: 'left' | 'right';
   /** padding size of button */
@@ -39,7 +39,7 @@ export interface ButtonProps {
 
 export const Button: React.FunctionComponent<ButtonProps> = ({
   'aria-label': ariaLabel = 'Button',
-  backgroundColor = '#243A5C',
+  backgroundColor = 'blue',
   children = null,
   classname = 'button',
   color = '#FFF',
@@ -62,7 +62,6 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
   }
 
   const ButtonStyle = {
-    backgroundColor: backgroundColor,
     color: color,
     padding: ButtonPadding(padding),
   }
@@ -71,7 +70,7 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
     <button
       {...props}
       style={ButtonStyle}
-      className={classname +' '+ variant}
+      className={classname +' '+ variant +' background-' + backgroundColor}
     >
       {children}
     </button>
