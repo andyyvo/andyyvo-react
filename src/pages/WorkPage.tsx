@@ -9,7 +9,8 @@ export const WorkPage: React.FunctionComponent = () => {
       <Screen>
         <Button
           variant={'primary'}
-          color={'#A0A3FF'}
+          backgroundColor={'emerald'}
+          color={'offwhite'}
           padding={'large'}
         >
           work

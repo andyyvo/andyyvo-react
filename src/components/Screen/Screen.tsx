@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * screen will have the padding on the sides -- basically this is what allows me to section of pieces on a page
+ */
+
 export interface ScreenProps {
   /** background color of screen */
   backgroundColor?: string;
@@ -11,6 +15,7 @@ export interface ScreenProps {
   padding?: string;
 }
 
+/** an AVO component */
 export const Screen: React.FunctionComponent<ScreenProps> = ({
   backgroundColor = '#fff',
   children = null,

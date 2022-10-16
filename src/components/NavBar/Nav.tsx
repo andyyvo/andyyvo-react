@@ -1,4 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
+
+/**
+ * the nav bar will be outside of the screen as its own item located at the very top of the screen
+ */
 
 export interface NavProps {
   /** accessible name for nav bar */
@@ -13,6 +17,7 @@ export interface NavProps {
   menu?: React.ReactNode;
 }
 
+/** an AVO component */
 export const Nav: React.FunctionComponent<NavProps> = ({
   'aria-label': ariaLabel = 'NavBar',
   backgroundColor = '#fff',
@@ -21,21 +26,6 @@ export const Nav: React.FunctionComponent<NavProps> = ({
   menu,
   ...props
 }: NavProps) => {
-  const [windowSize, setWindowSize] = React.useState(getWindowSize());
-
-  useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(getWindowSize());
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-    console.log(windowSize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    }
-  }, []);
-
   const NavStyle = {
     backgroundColor: backgroundColor
   }
@@ -58,13 +48,4 @@ export const Nav: React.FunctionComponent<NavProps> = ({
       </div>
     </div>
   );
-}
-
-function getWindowSize() {
-  const {
-    innerWidth,
-    innerHeight
-  } = window;
-
-  return { innerWidth, innerHeight };
 }

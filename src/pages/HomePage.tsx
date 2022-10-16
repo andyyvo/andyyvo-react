@@ -10,17 +10,22 @@ export const HomePage: React.FunctionComponent = () => {
 
   return (
     <ScreenFrame>
+      <NavBar />
       <Screen>
-        <NavBar />
         <Button
           variant={'primary'}
-          color={'#FFCA00'}
+          backgroundColor={'blue'}
+          color={'white'}
           padding={'large'}
         >
           hello
         </Button>
-        <HeaderText type="header1">Andy Vo</HeaderText>
-        <BodyText>Hello there! What's goin on?</BodyText>
+        <HeaderText type="header1">Andy Vo.</HeaderText>
+        <HeaderText type="header2" italics>The storyteller.</HeaderText>
+        <HeaderText type="header3">hehe.</HeaderText>
+        <BodyText size="large">Large body text</BodyText>
+        <BodyText size="medium">Regular body text</BodyText>
+        <BodyText size="small">OMG we're tiny!</BodyText>
       </Screen>
     </ScreenFrame>
   );

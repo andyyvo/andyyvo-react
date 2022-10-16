@@ -9,7 +9,8 @@ export const FreelancePage: React.FunctionComponent = () => {
       <Screen>
         <Button
           variant={'primary'}
-          color={'#00CEEA'}
+          backgroundColor={'offwhite'}
+          color={'emerald'}
           padding={'large'}
         >
           freelance

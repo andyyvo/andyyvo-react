@@ -9,7 +9,8 @@ export const AboutPage: React.FunctionComponent = () => {
       <Screen>
         <Button
           variant={'primary'}
-          color={'#002EFF'}
+          backgroundColor={'teal'}
+          color={'cream'}
           padding={'large'}
         >
           andy vo

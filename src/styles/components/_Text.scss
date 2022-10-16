@@ -1,0 +1,58 @@
+@use '../variables' as v;
+
+// header text size styles
+.headertext {
+  font-family: v.$plusjakarta;
+  display: inline;
+
+  &.header1 {
+    font-size: 7rem;
+  }
+
+  &.header2 {
+    font-size: 5rem;
+  }
+
+  &.header3 {
+    font-size: 3rem;
+  }
+}
+
+// body text size styles
+.bodytext {
+  font-family: v.$manrope;
+  display: inline;
+
+  &.large {
+    font-size: 2rem;
+  }
+
+  &.medium {
+    font-size: 1.5rem;
+  }
+
+  &.small {
+    font-size: 1rem;
+  }
+}
+
+// header and body weight and italic styles
+.headertext.bold, .bodytext.bold {
+  font-weight: v.$bold;
+}
+
+.headertext.regular, .bodytext.regular {
+  font-weight: v.$regular;
+}
+
+.headertext.thin, .bodytext.thin {
+  font-weight: v.$thin;
+}
+
+.headertext.straight, .bodytext.straight {
+  font-style: normal;
+}
+
+.headertext.italics, .bodytext.italics {
+  font-style: italic;
+}

@@ -9,7 +9,8 @@ export const ErrorPage: React.FunctionComponent = () => {
       <Screen>
         <Button
           variant={'primary'}
-          color={'#FF0000'}
+          backgroundColor={'cream'}
+          color={'teal'}
           padding={'large'}
         >
           error

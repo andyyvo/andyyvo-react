@@ -1,12 +1,18 @@
 import React from "react";
 
+/**
+ * header tags without using h1, h2, h3, etc.
+ */
+
 export interface HeaderTextProps {
   /** accessible name for HeaderText */
   'aria-label'?: string;
   /** renders content inside HeaderText */
-  children: string;
+  children: React.ReactNode;
   /** class name of text */
   classname?: string;
+  /** is it italicized?? */
+  italics?: boolean;
   /** type of header text */
   type: 'header1' | 'header2' | 'header3';
   /** weight of header text */
@@ -17,6 +23,7 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
   'aria-label': ariaLabel = 'Header Text',
   children,
   classname = 'headertext',
+  italics = false,
   type = 'header1',
   weight = 'bold',
   ...props
@@ -29,7 +36,8 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
           className={
             classname +' '+
             type +' '+
-            weight
+            weight +' '+
+            (italics ? 'italics' : 'straight')
           }
         >
           {children}
@@ -42,7 +50,8 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
           className={
             classname +' '+
             type +' '+
-            weight
+            weight +' '+
+            (italics ? 'italics' : 'straight')
           }
         >
           {children}
@@ -55,7 +64,8 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
           className={
             classname +' '+
             type +' '+
-            weight
+            weight +' '+
+            (italics ? 'italics' : 'straight')
           }
         >
           {children}

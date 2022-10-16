@@ -3,15 +3,97 @@
 .button {
   cursor: pointer;
 
+  // variant styles
   &.primary {
-    color: v.$emerald;
+    // background color styles
+    &.background-blue {
+      background-color: v.$blue;
+    }
+
+    &.background-teal {
+      background-color: v.$teal;
+    }
+
+    &.background-green {
+      background-color: v.$emerald;
+    }
+
+    &.background-cream {
+      background-color: v.$cream;
+    }
+
+    &.background-offwhite {
+      background-color: v.$off-white;
+    }
+
+    &.background-white {
+      background-color: v.$white;
+    }
   }
 
   &.secondary {
+    background-color: v.$white;
 
+    // background color styles
+    &.background-blue {
+      border: 4px solid v.$blue;
+    }
+
+    &.background-teal {
+      border: 4px solid v.$teal;
+    }
+
+    &.background-green {
+      border: 4px solid v.$emerald;
+    }
+
+    &.background-cream {
+      border: 4px solid v.$cream;
+    }
+
+    &.background-offwhite {
+      border: 4px solid v.$off-white;
+    }
+
+    &.background-white {
+      border: 4px solid v.$white;
+    }
   }
 
   &.link {
+    // background color styles
+    &.background-white {
+      background-color: v.$white;
+    }
 
+    // hover effect
+    &:hover {
+      background-color: v.$off-white;
+    }
+  }
+
+  // text color styles
+  &.text-blue {
+    color: v.$blue;
+  }
+
+  &.text-teal {
+    color: v.$teal;
+  }
+
+  &.text-green {
+    color: v.$emerald;
+  }
+
+  &.text-cream {
+    color: v.$cream;
+  }
+
+  &.text-offwhite {
+    color: v.$off-white;
+  }
+
+  &.text-white {
+    color: v.$white;
   }
 }
