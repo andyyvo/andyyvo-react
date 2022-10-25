@@ -1,0 +1,25 @@
+@use '../variables' as v;
+
+.screen {
+  width: 100%;
+  height: auto;
+
+  &.background-blue {
+    background-color: v.$blue;
+  }
+  &.background-teal {
+    background-color: v.$teal;
+  }
+  &.background-emerald {
+    background-color: v.$emerald;
+  }
+  &.background-cream {
+    background-color: v.$cream;
+  }
+  &.background-offwhite {
+    background-color: v.$off-white;
+  }
+  &.background-white {
+    background-color: v.$white;
+  }
+}

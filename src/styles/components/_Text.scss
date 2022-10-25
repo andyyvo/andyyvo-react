@@ -4,17 +4,22 @@
 .headertext {
   font-family: v.$plusjakarta;
   display: inline;
+  color: v.$blue;
 
   &.header1 {
-    font-size: 7rem;
+    font-size: 6rem;
   }
 
   &.header2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   &.header3 {
     font-size: 3rem;
+  }
+
+  &.mini {
+    font-size: 1rem;
   }
 }
 
@@ -22,6 +27,7 @@
 .bodytext {
   font-family: v.$manrope;
   display: inline;
+  color: v.$blue;
 
   &.large {
     font-size: 2rem;
@@ -33,6 +39,10 @@
 
   &.small {
     font-size: 1rem;
+  }
+
+  &.mini {
+    font-size: 0.75rem;
   }
 }
 
@@ -55,4 +65,17 @@
 
 .headertext.italics, .bodytext.italics {
   font-style: italic;
+}
+
+// text color
+.textcolor-white {
+  color: v.$white;
+}
+
+.textcolor-teal {
+  color: v.$teal;
+}
+
+.underline {
+  text-decoration: underline;
 }

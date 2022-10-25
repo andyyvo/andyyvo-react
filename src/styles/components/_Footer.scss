@@ -1,0 +1,20 @@
+@use '../variables' as v;
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 4% 15%;
+  background-color: v.$cream;
+  display: flex;
+  align-items: center;
+
+  &-socials {
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+  }
+}

@@ -44,6 +44,8 @@
 }
 .button.link.background-white {
   background-color: #FDFDFF;
+  border-radius: 0.25rem;
+  transition: background-color 200ms ease-in;
 }
 .button.link:hover {
   background-color: #E8F1F2;
@@ -67,6 +69,24 @@
   color: #FDFDFF;
 }
 
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 4% 15%;
+  background-color: #F1E0C5;
+  display: flex;
+  align-items: center;
+}
+.footer-socials {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+}
+
 .logo {
   display: inline-block;
   width: 100%;
@@ -80,7 +100,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 2rem 15%;
+  background-color: #FDFDFF;
 }
 .navbar-logo {
   display: inline-block;
@@ -91,23 +112,51 @@
   display: inline-block;
 }
 
+.screen {
+  width: 100%;
+  height: auto;
+}
+.screen.background-blue {
+  background-color: #001b2e;
+}
+.screen.background-teal {
+  background-color: #007991;
+}
+.screen.background-emerald {
+  background-color: #439A86;
+}
+.screen.background-cream {
+  background-color: #F1E0C5;
+}
+.screen.background-offwhite {
+  background-color: #E8F1F2;
+}
+.screen.background-white {
+  background-color: #FDFDFF;
+}
+
 .headertext {
   font-family: "Plus Jakarta Sans", sans-serif;
   display: inline;
+  color: #001b2e;
 }
 .headertext.header1 {
-  font-size: 7rem;
+  font-size: 6rem;
 }
 .headertext.header2 {
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 .headertext.header3 {
   font-size: 3rem;
+}
+.headertext.mini {
+  font-size: 1rem;
 }
 
 .bodytext {
   font-family: "Manrope", sans-serif;
   display: inline;
+  color: #001b2e;
 }
 .bodytext.large {
   font-size: 2rem;
@@ -117,6 +166,9 @@
 }
 .bodytext.small {
   font-size: 1rem;
+}
+.bodytext.mini {
+  font-size: 0.75rem;
 }
 
 .headertext.bold, .bodytext.bold {
@@ -137,6 +189,23 @@
 
 .headertext.italics, .bodytext.italics {
   font-style: italic;
+}
+
+.textcolor-white {
+  color: #FDFDFF;
+}
+
+.textcolor-teal {
+  color: #007991;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bodytext.landing1 {
+  display: block;
+  margin-top: 2rem;
 }
 
 * {

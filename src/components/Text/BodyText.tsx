@@ -11,10 +11,12 @@ export interface BodyTextProps {
   children: React.ReactNode;
   /** class name of text */
   classname?: string;
+  /** text color */
+  color?: 'blue' | 'white';
   /** is it italicized?? */
   italics?: boolean;
   /** size of text */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'mini';
   /** weight of text */
   weight?: 'thin' | 'regular' | 'bold';
 }
@@ -23,6 +25,7 @@ export const BodyText: React.FunctionComponent<BodyTextProps> = ({
   'aria-label': ariaLabel = 'Body Text',
   children,
   classname = 'bodytext',
+  color = 'blue',
   italics = false,
   size = 'medium',
   weight = 'regular',
@@ -35,7 +38,8 @@ export const BodyText: React.FunctionComponent<BodyTextProps> = ({
         classname +' '+
         size +' '+
         weight +' '+
-        (italics ? 'italics' : 'straight')
+        (italics ? 'italics' : 'straight') +
+        ' textcolor-'+ color
       }
     >
       {children}

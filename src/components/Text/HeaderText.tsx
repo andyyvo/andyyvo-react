@@ -11,10 +11,12 @@ export interface HeaderTextProps {
   children: React.ReactNode;
   /** class name of text */
   classname?: string;
+  /** text color */
+  color?: 'blue' | 'white';
   /** is it italicized?? */
   italics?: boolean;
   /** type of header text */
-  type: 'header1' | 'header2' | 'header3';
+  type: 'header1' | 'header2' | 'header3' | 'mini';
   /** weight of header text */
   weight?: 'thin' | 'regular' | 'bold';
 }
@@ -23,6 +25,7 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
   'aria-label': ariaLabel = 'Header Text',
   children,
   classname = 'headertext',
+  color = 'blue',
   italics = false,
   type = 'header1',
   weight = 'bold',
@@ -37,7 +40,8 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
             classname +' '+
             type +' '+
             weight +' '+
-            (italics ? 'italics' : 'straight')
+            (italics ? 'italics' : 'straight') +
+            ' textcolor-'+ color
           }
         >
           {children}
@@ -51,7 +55,8 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
             classname +' '+
             type +' '+
             weight +' '+
-            (italics ? 'italics' : 'straight')
+            (italics ? 'italics' : 'straight') +
+            ' textcolor-'+ color
           }
         >
           {children}
@@ -65,11 +70,27 @@ export const HeaderText: React.FunctionComponent<HeaderTextProps> = ({
             classname +' '+
             type +' '+
             weight +' '+
-            (italics ? 'italics' : 'straight')
+            (italics ? 'italics' : 'straight') +
+            ' textcolor-'+ color
           }
         >
           {children}
         </h3>
+      );
+    } else if (type === 'mini') {
+      return (
+        <h4
+          {...props}
+          className={
+            classname +' '+
+            type +' '+
+            weight +' '+
+            (italics ? 'italics' : 'straight') +
+            ' textcolor-'+ color
+          }
+        >
+          {children}
+        </h4>
       );
     }
   }

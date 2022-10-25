@@ -64,6 +64,8 @@
     // background color styles
     &.background-white {
       background-color: v.$white;
+      border-radius: 0.25rem;
+      transition: background-color 200ms ease-in;
     }
 
     // hover effect

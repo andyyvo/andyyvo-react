@@ -7,9 +7,7 @@ import React from "react";
 export interface NavProps {
   /** accessible name for nav bar */
   'aria-label'?: string;
-  /** color of nav bar background */
-  backgroundColor?: string;
-  /** class name of button */
+  /** class name of nav bar */
   classname?: string;
   /** renders logo left side of nav bar */
   logo?: React.ReactNode;
@@ -20,21 +18,16 @@ export interface NavProps {
 /** an AVO component */
 export const Nav: React.FunctionComponent<NavProps> = ({
   'aria-label': ariaLabel = 'NavBar',
-  backgroundColor = '#fff',
   classname = 'navbar',
   logo,
   menu,
   ...props
 }: NavProps) => {
-  const NavStyle = {
-    backgroundColor: backgroundColor
-  }
 
   return (
     <div
       {...props}
       className={classname}
-      style={NavStyle}
     >
       <div
         className="navbar-logo"

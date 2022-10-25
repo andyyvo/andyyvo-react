@@ -6,7 +6,7 @@ import React from "react";
 
 export interface ScreenProps {
   /** background color of screen */
-  backgroundColor?: string;
+  backgroundColor: 'blue' | 'teal' | 'emerald' | 'cream' | 'offwhite' | 'white';
   /** renders content inside screen */
   children?: React.ReactNode;
   /** class name of screen */
@@ -17,20 +17,22 @@ export interface ScreenProps {
 
 /** an AVO component */
 export const Screen: React.FunctionComponent<ScreenProps> = ({
-  backgroundColor = '#fff',
+  backgroundColor = 'white',
   children = null,
   classname = 'screen',
   padding = '',
   ...props
 }: ScreenProps) => {
   const ScreenStyle = {
-    backgroundColor: backgroundColor,
     padding: padding
   }
   return (
     <div
     {...props}
-      className={classname}
+      className={
+        classname
+        +' background-'+ backgroundColor
+      }
       style={ScreenStyle}
     >
       {children}
