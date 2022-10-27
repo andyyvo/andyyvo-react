@@ -1,16 +1,13 @@
 import React from "react";
 import { Button } from "../components/Button/Button";
-import { NavBar } from "../components/NavBar/NavBar";
+import { PageWrapper } from "../components/Page/Page";
 import { Screen } from "../components/Screen/Screen";
-import { ScreenFrame } from "../components/Screen/ScreenFrame";
 import { BodyText } from "../components/Text/BodyText";
 import { HeaderText } from "../components/Text/HeaderText";
 
 export const StylesPage: React.FunctionComponent = () => {
-
-  return (
-    <ScreenFrame>
-      <NavBar />
+  const stylesPageContent = (
+    <>
       <Screen backgroundColor="white">
         <Button
           variant={'primary'}
@@ -21,11 +18,11 @@ export const StylesPage: React.FunctionComponent = () => {
           hello
         </Button>
         <br />
-        <HeaderText type="header1">Andy Vo.</HeaderText>
+        <HeaderText type="header1">Header 1.</HeaderText>
         <br />
-        <HeaderText type="header2" italics>The storyteller.</HeaderText>
+        <HeaderText type="header2" italics>Header 2.</HeaderText>
         <br />
-        <HeaderText type="header3">hehe.</HeaderText>
+        <HeaderText type="header3">Header 3.</HeaderText>
         <br />
         <BodyText size="large">Large body text</BodyText>
         <br />
@@ -48,6 +45,12 @@ export const StylesPage: React.FunctionComponent = () => {
       <Screen backgroundColor="blue">
         <HeaderText color="white" type="header1">blue</HeaderText>
       </Screen>
-    </ScreenFrame>
+    </>
+  )
+
+  return (
+    <PageWrapper>
+      {stylesPageContent}
+    </PageWrapper>
   );
 }

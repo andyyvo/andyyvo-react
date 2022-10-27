@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
-import { Logo } from "../Logo/Logo";
 import { BodyText } from "../Text/BodyText";
 import { HeaderText } from "../Text/HeaderText";
 import { Footer } from "./Footer";
@@ -13,13 +11,13 @@ import { Footer } from "./Footer";
 export const FooterBar: React.FunctionComponent = () => {
   const footerContent = (
     <>
-      <HeaderText type="header3">Let's make some <a target="_blank" href="mailto:andyvo@berkeley.edu"><span className="textcolor-teal underline">magic!</span></a></HeaderText>
+      <HeaderText type="header3">Let's make some <a target="_blank" rel="noopener noreferrer" href="mailto:andyvo@berkeley.edu"><span className="textcolor-teal underline">magic!</span></a></HeaderText>
     </>
   );
 
   const footerSocials = (
     <>
-      <a target="_blank" href="https://www.linkedin.com/in/andyyvo/">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andyyvo/">
         <Button
           backgroundColor="emerald"
           color="white"
@@ -28,7 +26,7 @@ export const FooterBar: React.FunctionComponent = () => {
           <BodyText size="medium" weight="bold">LinkedIn</BodyText>
         </Button>
       </a>
-      <a target="_blank" href="https://github.com/andyyvo/">
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/andyyvo/">
         <Button
           backgroundColor="emerald"
           color="white"
@@ -37,7 +35,7 @@ export const FooterBar: React.FunctionComponent = () => {
           <BodyText size="medium" weight="bold">GitHub</BodyText>
         </Button>
       </a>
-      <a target="_blank" href="https://www.instagram.com/theandyvo/">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/theandyvo/">
         <Button
           backgroundColor="emerald"
           color="white"
