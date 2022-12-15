@@ -12,7 +12,6 @@ export const AboutPage: React.FunctionComponent = () => {
         <Button
           variant={'primary'}
           backgroundColor={'teal'}
-          color={'cream'}
           padding={'large'}
         >
           andy vo

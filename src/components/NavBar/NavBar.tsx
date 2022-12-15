@@ -16,7 +16,6 @@ export const NavBar: React.FunctionComponent = () => {
         <Button
           variant="link"
           backgroundColor="white"
-          color="blue"
           padding="small"
         >
           <BodyText size="small">About</BodyText>
@@ -26,7 +25,6 @@ export const NavBar: React.FunctionComponent = () => {
         <Button
           variant="link"
           backgroundColor="white"
-          color="blue"
           padding="small"
         >
           <BodyText size="small">Work</BodyText>
@@ -36,7 +34,6 @@ export const NavBar: React.FunctionComponent = () => {
         <Button
           variant="link"
           backgroundColor="white"
-          color="blue"
           padding="small"
         >
           <BodyText size="small">Collab</BodyText>

@@ -1,6 +1,4 @@
 import React from "react";
-import logo_dark from "../../assets/images/full_logo_dark.svg";
-import logo_light from "../../assets/images/full_logo_light.svg";
 
 /**
  * the AVO logo -- it's why I like avocados :D
@@ -29,7 +27,7 @@ export const Logo: React.FunctionComponent<LogoProps> = ({
     if (color === 'dark') {
       return (
         <img
-          src={logo_dark}
+          src={process.env.PUBLIC_URL + "/assets/images/full_logo_dark.svg"}
           alt="andy vo logo"
           {...props}
           className={
@@ -42,7 +40,7 @@ export const Logo: React.FunctionComponent<LogoProps> = ({
     } else {
       return (
         <img
-          src={logo_light}
+          src={process.env.PUBLIC_URL + "/assets/images/full_logo_light.svg"}
           alt="andy vo logo"
           className={
             classname +' '+

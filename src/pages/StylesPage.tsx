@@ -12,7 +12,6 @@ export const StylesPage: React.FunctionComponent = () => {
         <Button
           variant={'primary'}
           backgroundColor={'blue'}
-          color={'white'}
           padding={'large'}
         >
           hello

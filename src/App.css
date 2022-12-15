@@ -50,25 +50,58 @@
 .button.link:hover {
   background-color: #E8F1F2;
 }
-.button.text-blue {
-  color: #001b2e;
+
+/* ADVENTURE CARD FROM HOME PAGE */
+.adventurecard {
+  position: relative;
+  width: 45%;
+  border: 1rem solid #FDFDFF;
+  background-color: #001b2e;
+  margin-bottom: 5%;
 }
-.button.text-teal {
-  color: #007991;
+.adventurecard:hover {
+  cursor: pointer;
 }
-.button.text-green {
-  color: #439A86;
+.adventurecard-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #007991;
+  padding: 3%;
+  z-index: 999;
 }
-.button.text-cream {
-  color: #F1E0C5;
+.adventurecard-header {
+  position: relative;
 }
-.button.text-offwhite {
-  color: #E8F1F2;
+.adventurecard-header-img {
+  margin-bottom: 3%;
 }
-.button.text-white {
-  color: #FDFDFF;
+.adventurecard-header-img > img {
+  width: 100%;
+  height: auto;
 }
 
+@media screen and (max-width: 1040px) {
+  .adventurecard {
+    width: 90%;
+  }
+  .hover-card {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1rem solid #FDFDFF;
+    z-index: 1;
+  }
+  .hover-card.right {
+    right: -2rem;
+    transform: rotate(3deg);
+  }
+  .hover-card.left {
+    left: -3rem;
+    transform: rotate(-5deg);
+  }
+}
 .footer {
   position: relative;
   width: 100%;
@@ -191,12 +224,28 @@
   font-style: italic;
 }
 
-.textcolor-white {
-  color: #FDFDFF;
+.textcolor-blue {
+  color: #001b2e;
 }
 
 .textcolor-teal {
   color: #007991;
+}
+
+.textcolor-green {
+  color: #439A86;
+}
+
+.textcolor-cream {
+  color: #F1E0C5;
+}
+
+.textcolor-offwhite {
+  color: #E8F1F2;
+}
+
+.textcolor-white {
+  color: #FDFDFF;
 }
 
 .underline {
@@ -206,6 +255,13 @@
 .bodytext.landing1 {
   display: block;
   margin-top: 2rem;
+}
+
+.adventure-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 * {

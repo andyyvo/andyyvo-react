@@ -25,8 +25,6 @@ export interface ButtonProps {
   children?: React.ReactNode;
   /** class name of button */
   classname?: string;
-  /** color of button text */
-  color: 'blue' | 'teal' | 'emerald' | 'cream' | 'offwhite' | 'white';
   /** hover color of button */
   hoverColor?: string;
   /** hover height of button */
@@ -47,7 +45,6 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
   backgroundColor = 'blue',
   children = null,
   classname = 'button',
-  color = 'white',
   hoverColor = '#22222288',
   hoverHeight = 'flat',
   icon = null,
@@ -77,8 +74,7 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
       className={
         classname +' '+
         variant +
-        ' background-' + backgroundColor +
-        ' text-' + color
+        ' background-' + backgroundColor
       }
     >
       {children}

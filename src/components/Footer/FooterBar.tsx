@@ -20,7 +20,6 @@ export const FooterBar: React.FunctionComponent = () => {
       <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/andyyvo/">
         <Button
           backgroundColor="emerald"
-          color="white"
           variant="primary"
         >
           <BodyText size="medium" weight="bold">LinkedIn</BodyText>
@@ -29,7 +28,6 @@ export const FooterBar: React.FunctionComponent = () => {
       <a target="_blank" rel="noopener noreferrer" href="https://github.com/andyyvo/">
         <Button
           backgroundColor="emerald"
-          color="white"
           variant="primary"
         >
           <BodyText size="medium" weight="bold">GitHub</BodyText>
@@ -38,7 +36,6 @@ export const FooterBar: React.FunctionComponent = () => {
       <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/theandyvo/">
         <Button
           backgroundColor="emerald"
-          color="white"
           variant="primary"
         >
           <BodyText size="medium" weight="bold">Instagram</BodyText>

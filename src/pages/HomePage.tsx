@@ -1,11 +1,30 @@
-import React from "react";
-import { Button } from "../components/Button/Button";
+import React, { useEffect } from "react";
+import { AdventureCard } from "../components/Card/AdventureCard";
 import { PageWrapper } from "../components/Page/Page";
 import { Screen } from "../components/Screen/Screen";
 import { BodyText } from "../components/Text/BodyText";
 import { HeaderText } from "../components/Text/HeaderText";
 
+/* importing quest data */
+import { adventures } from "../data/adventures";
+
 export const HomePage: React.FunctionComponent = () => {
+  /* state of data */
+  // soln to mapping type issue: https://bobbyhadz.com/blog/typescript-object-is-possibly-undefined
+  type adventuresList = {
+    "title": string;
+    "description": string;
+    "image": string;
+    "imageAlt": string;
+    "link": string;
+  }[];
+  const [adventuresShown, setAdventuresShown] = React.useState<adventuresList>();
+  const numShown = 4; // magic number to show most recent 4 quests
+
+  useEffect(() => {
+    setAdventuresShown(adventures);
+  }, []);
+
   /** ANDY VO THE HERO */
   const homePageHero = (
     <Screen backgroundColor="white" padding="8% 15%">
@@ -19,8 +38,24 @@ export const HomePage: React.FunctionComponent = () => {
 
   /** my adventure log! saving a lot of data... */
   const homePageAdventures = (
-    <Screen backgroundColor="offwhite" padding="4% 15%">
-      <HeaderText type="header1">Adventures.</HeaderText>
+    <Screen backgroundColor="blue" padding="4% 15%">
+      <HeaderText type="header1" color="white">Adventures.</HeaderText>
+      <div className="adventure-section">
+        {adventuresShown?.slice(0,numShown).map((adventure, index) => (
+          <AdventureCard
+            key={index}
+            title={adventure.title}
+            description={adventure.description}
+            image={
+              <img src={process.env.PUBLIC_URL + adventure.image} alt={adventure.imageAlt} />
+            }
+            expandLink={adventure.link}
+          >
+            <div className="hover-card right"></div>
+            <div className="hover-card left"></div>
+          </AdventureCard>
+        ))}
+      </div>
     </Screen>
   );
 

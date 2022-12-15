@@ -12,7 +12,6 @@ export const ErrorPage: React.FunctionComponent = () => {
         <Button
           variant={'primary'}
           backgroundColor={'cream'}
-          color={'teal'}
           padding={'large'}
         >
           error

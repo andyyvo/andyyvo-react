@@ -12,7 +12,7 @@ export interface BodyTextProps {
   /** class name of text */
   classname?: string;
   /** text color */
-  color?: 'blue' | 'white';
+  color?: 'blue' | 'teal' | 'emerald' | 'cream' | 'offwhite' | 'white';
   /** is it italicized?? */
   italics?: boolean;
   /** size of text */
