@@ -9,5 +9,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+// for when adventure cards become full width
+@media screen and (max-width: 1040px) {
+  .adventure-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -20,3 +20,17 @@
     display: inline-block;
   }
 }
+
+// ipad size
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 2rem 10%;
+  }
+}
+
+// phone size
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 2rem 8%;
+  }
+}

@@ -12,7 +12,7 @@ export interface ScreenProps {
   /** class name of screen */
   classname?: string;
   /** side padding of screen */
-  padding?: string;
+  padding?: 'small' | 'large';
 }
 
 /** an AVO component */
@@ -20,20 +20,17 @@ export const Screen: React.FunctionComponent<ScreenProps> = ({
   backgroundColor = 'white',
   children = null,
   classname = 'screen',
-  padding = '',
+  padding = 'small',
   ...props
 }: ScreenProps) => {
-  const ScreenStyle = {
-    padding: padding
-  }
   return (
     <div
     {...props}
       className={
         classname
         +' background-'+ backgroundColor
+        +' padding-'+ padding
       }
-      style={ScreenStyle}
     >
       {children}
     </div>

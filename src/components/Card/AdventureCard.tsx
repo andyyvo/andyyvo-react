@@ -37,21 +37,20 @@ export const AdventureCard: React.FunctionComponent<AdventureCardProps> = ({
       {...props}
       className={classname}
     >
-      <div className="adventurecard-wrapper">
-        <div className="adventurecard-header">
-          <div className="adventurecard-header-img">
-            {image}
+      <Link to={expandLink}>
+        <div className="adventurecard-wrapper">
+          <div className="adventurecard-header">
+            <div className="adventurecard-header-img">
+              {image}
+            </div>
+            <HeaderText type="header3" color="white">{title}</HeaderText>
           </div>
-          <HeaderText type="header3" color="white">{title}</HeaderText>
+          <div className="adventurecard-content">
+            <BodyText color="white">{description}</BodyText>
+          </div>
         </div>
-        <div className="adventurecard-content">
-          <BodyText color="white">{description}</BodyText>
-          <Link to={expandLink}>
-            <Button backgroundColor="white" variant="primary"><HeaderText type="mini">Learn More</HeaderText></Button>
-          </Link>
-        </div>
-      </div>
-      {children}
+        {children}
+      </Link>
     </div>
   )
 }

@@ -95,3 +95,120 @@
 .underline {
   text-decoration: underline;
 }
+
+// first breakpoint for font size
+@media screen and (max-width: 960px) {
+  .headertext {
+    &.header1 {
+      font-size: 5rem;
+    }
+  
+    &.header2 {
+      font-size: 3.5rem;
+    }
+  
+    &.header3 {
+      font-size: 2.5rem;
+    }
+  
+    &.mini {
+      font-size: 1rem;
+    }
+  }
+
+  .bodytext {
+    &.large {
+      font-size: 1.5rem;
+    }
+  
+    &.medium {
+      font-size: 1rem;
+    }
+  
+    &.small {
+      font-size: 0.875rem;
+    }
+  
+    &.mini {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+// second breakpoint for font size -- ipad size
+@media screen and (max-width: 768px) {
+  .headertext {
+    &.header1 {
+      font-size: 4rem;
+    }
+  
+    &.header2 {
+      font-size: 3rem;
+    }
+  
+    &.header3 {
+      font-size: 2rem;
+    }
+  
+    &.mini {
+      font-size: 1rem;
+    }
+  }
+
+  .bodytext {
+    &.large {
+      font-size: 1.5rem;
+    }
+  
+    &.medium {
+      font-size: 1rem;
+    }
+  
+    &.small {
+      font-size: 0.875rem;
+    }
+  
+    &.mini {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+// phone size
+@media screen and (max-width: 480px) {
+  .headertext {
+    &.header1 {
+      font-size: 2.5rem;
+    }
+  
+    &.header2 {
+      font-size: 2rem;
+    }
+  
+    &.header3 {
+      font-size: 1.5rem;
+    }
+  
+    &.mini {
+      font-size: 1rem;
+    }
+  }
+
+  .bodytext {
+    &.large {
+      font-size: 1.5rem;
+    }
+  
+    &.medium {
+      font-size: 1rem;
+    }
+  
+    &.small {
+      font-size: 0.875rem;
+    }
+  
+    &.mini {
+      font-size: 0.75rem;
+    }
+  }
+}
