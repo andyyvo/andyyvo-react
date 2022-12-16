@@ -39,7 +39,7 @@ export const HomePage: React.FunctionComponent = () => {
   /** my adventure log! saving a lot of data... */
   const homePageAdventures = (
     <Screen backgroundColor="blue">
-      <HeaderText type="header1" color="white">Adventures.</HeaderText>
+      <HeaderText type="header1" color="white">Adventures. 🏔️</HeaderText>
       <div className="adventure-section">
         {adventuresShown?.slice(0,numShown).map((adventure, index) => (
           <AdventureCard
@@ -62,14 +62,14 @@ export const HomePage: React.FunctionComponent = () => {
   /** take a peek into my level 999 spellbook */
   const homePageSpellbook = (
     <Screen backgroundColor="white">
-      <HeaderText type="header1">Spellbook.</HeaderText>
+      <HeaderText type="header1">Spellbook. 📚</HeaderText>
     </Screen>
   );
 
   /** main story quest */
   const homePageQuest = (
     <Screen backgroundColor="blue">
-      <HeaderText classname="headertext textcolor-white" type="header1">Quest.</HeaderText>
+      <HeaderText classname="headertext textcolor-white" type="header1">Quest. 💫</HeaderText>
     </Screen>
   );
 

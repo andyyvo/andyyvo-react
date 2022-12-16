@@ -11,7 +11,7 @@ import { Footer } from "./Footer";
 export const FooterBar: React.FunctionComponent = () => {
   const footerContent = (
     <>
-      <HeaderText type="header3">Let's make some <a target="_blank" rel="noopener noreferrer" href="mailto:andyvo@berkeley.edu"><span className="textcolor-teal underline">magic!</span></a></HeaderText>
+      <HeaderText type="header3">Let's make some <a target="_blank" rel="noopener noreferrer" href="mailto:andyvo@berkeley.edu"><span className="textcolor-teal underline">magic!</span></a> 🪄</HeaderText>
     </>
   );
 

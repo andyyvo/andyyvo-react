@@ -454,4 +454,8 @@ body {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=App.css.map */
