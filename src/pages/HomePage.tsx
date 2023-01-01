@@ -63,6 +63,15 @@ export const HomePage: React.FunctionComponent = () => {
   const homePageSpellbook = (
     <Screen backgroundColor="white">
       <HeaderText type="header1">Spellbook. 📚</HeaderText>
+      <div className="spellbook-section">
+        <div className="spellbook-section-img">
+          <img src={process.env.PUBLIC_URL + "/assets/images/andyvo-bw.png"} alt="andy vo black and white profile pic" />
+          <HeaderText type="header3" italics>one man's magic is another man's engineering</HeaderText>
+        </div>
+        <div className="spellbook-section-content">
+          <BodyText>hello</BodyText>
+        </div>
+      </div>
     </Screen>
   );
 
